@@ -1,0 +1,774 @@
+@font-face {
+    font-family: neu;
+    src: url(./public/NeueHaasDisplayMediu.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "neu";
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
+}
+
+.page1 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 0 2vw;
+}
+
+
+.page1 h1 {
+    font-size: 13vw;
+    text-transform: uppercase;
+    line-height: 13vw;
+
+}
+
+nav {
+    padding: 2vw 2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+nav h3 {
+    display: none;
+}
+
+.nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+}
+
+.nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-weight: 300;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+
+}
+
+.nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+    color: black;
+
+}
+
+.nav-part2 h4 a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+.nav-part2 h4:hover a {
+    color: #EFEAE3;
+}
+
+.center {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+
+
+}
+
+.left h2 {
+    width: 30vw;
+    font-size: 4.2vw;
+    line-height: 4vw;
+    font-weight: 800;
+
+}
+
+.left h3 {
+    display: none;
+}
+
+.right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    gap: 0.6vw;
+}
+
+.box1 {
+    height: 100%;
+    width: 50%;
+
+
+}
+
+.box2 {
+    height: 100%;
+    width: 50%;
+    background-image: url(box2pic.jpg);
+
+    border-top-right-radius: 15%;
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 20%;
+}
+
+.teeth {
+    height: 50%;
+    width: 100%;
+    background-image: url(teethpic.png);
+    border-top-left-radius: 20%;
+    background-size: cover;
+    background-position: center;
+}
+
+.gola {
+    height: 50%;
+    width: 80%;
+    border-radius: 50%;
+    background-image: url(golapic.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.page1 video {
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 3vw;
+
+
+}
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+}
+
+.moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.moving-text h1 {
+    font-size: 9vw;
+    display: inline-block;
+}
+
+.gol {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: lightblue;
+    display: inline-block;
+    margin: 1vw 2vw;
+
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page2-bottom {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5vw;
+
+}
+
+.page2-bottom h1 {
+    font-size: 3vw;
+    line-height: 4vw;
+
+}
+
+.page2-bottom h2 {
+    display: none;
+}
+
+.bottom-part2 {
+    height: 40vh;
+    width: 45%;
+    background-image: url(dental.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+}
+
+.page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+.elem {
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+    padding: 0 2vw;
+}
+
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(234, 7, 7); */
+    background-color: cadetblue;
+    position: absolute;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+
+}
+
+.fixed-image {
+    height: 25vw;
+    width: 20vw;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+}
+
+.page4 {
+    height: 35vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+
+.page5 {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #EFEAE3; */
+    /* background-color: red; */
+}
+
+.futter {
+    position: fixed;
+    z-index: 9;
+    height: 105vh;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    /* align-items: flex-end; */
+    color: white;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw 3vw;
+}
+
+.futter h1 {
+    font-size: 15vw;
+}
+
+
+.futter-bottom {
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+
+.futter-text1 {
+    padding-bottom: 3vw;
+    font-size: 1.2vw;
+    /* row-gap: 2vw; */
+    color: #EFEAE3;
+    display: flex;
+    justify-content: space-between;
+    /* column-gap: 5vw; */
+    line-height: 1.8vw;
+}
+
+.futter-text1 h6 {
+    color: #c0bcb8;
+    line-height: 1;
+}
+
+.fullscr {
+    height: 100vh;
+    width: 100%;
+    /* background-color:#00000070; */
+    position: absolute;
+
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.8s;
+
+
+}
+
+.fulldiv {
+    height: 100%;
+    width: 100%;
+    background-color: #EFEAE3;
+    
+
+}
+
+.fullscr img {
+    height: 20px;
+    width: 20px;
+    margin: 4vw 9vw;
+
+}
+
+#close_btn {
+    margin: 2.3vh 85.2vw;
+}
+
+.menuitem {
+    padding: 20vh 35vw;
+    line-height: 9vh;
+    font-size: 5vw;
+    font-weight: 200;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+
+    .page1 {
+        min-height: 100vh;
+        position: relative;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding: 0 2vw;
+    }
+
+    nav {
+        padding: 2vw 8vw;
+        /* background-color: red; */
+
+
+
+    }
+
+    nav h2 {
+        font-size: 3.5vw;
+    }
+
+    nav h3 {
+        display: block;
+    }
+
+    .nav-part2 {
+        display: none;
+
+    }
+
+    .center {
+        height: 105vh;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column-reverse;
+        border-bottom: 1px solid #0000003c;
+
+        /* background-color: aqua; */
+
+
+
+    }
+
+    .left h2 {
+
+        font-size: 9vw;
+        line-height: 3vh;
+        font-weight: 800;
+        display: none;
+    }
+
+    .left h3 {
+        display: block;
+        font-size: 9vw;
+        font-weight: 700;
+        padding: 1vw 3vw;
+        color: rgb(65, 52, 52);
+
+    }
+
+    .right {
+        height: 90vh;
+        width: 100%;
+
+        flex-direction: column;
+        gap: 5vh;
+        /* background-color: red; */
+
+    }
+
+    .box1 {
+        height: 50%;
+        width: 100%;
+
+        /* background-color: yellow; */
+
+
+
+    }
+
+    .box2 {
+        height: 60vh;
+        width: 100%;
+        background-image: url(box2pic.jpg);
+        background-color: yellow;
+        display: none;
+        background-size: cover;
+        background-position: center;
+        flex-direction: row-reverse;
+        position: relative;
+
+
+    }
+
+    .teeth {
+        height: 40vh;
+        width: 100%;
+        background-image: url(teethpic.png);
+        border-top-left-radius: 0%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 14px;
+    }
+
+    .gola {
+        height: 44vh;
+        width: 100%;
+        border-radius: 50%;
+        background-image: url(golapic.png);
+        background-size: cover;
+        background-position: center;
+        background-color: red;
+
+
+
+
+    }
+
+    .page1 video {
+        width: 100%;
+        border-radius: 13px;
+        margin-top: 2vh;
+
+
+
+    }
+
+
+    .page2 {
+        height: 61vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding: 8vw 0vw;
+        /* background-color: red; */
+    }
+
+    .moving-text {
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .moving-text::-webkit-scrollbar {
+        display: none;
+    }
+
+    .con {
+        white-space: nowrap;
+        display: inline-block;
+        animation-name: move;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .moving-text h1 {
+        font-size: 11vw;
+        display: inline-block;
+    }
+
+    .gol {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        background-color: lightblue;
+        display: inline-block;
+        margin: 1vw 2vw;
+
+
+    }
+
+    @keyframes move {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .page2-bottom {
+        height: 45vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2vw 2vw;
+        flex-direction: column;
+        /* background-color: red; */
+
+    }
+
+    .page2-bottom h1 {
+        font-size: 3vw;
+        line-height: 4vw;
+        display: none;
+    }
+
+    .page2-bottom h2 {
+        display: block;
+        font-size: 4.5vw;
+    }
+
+    .bottom-part2 {
+        height: 35vh;
+        width: 100%;
+        background-image: url(dental.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 5%;
+
+    }
+
+    .page3 {
+        min-height: 60vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding: 4vw 0;
+        /* background-color: aqua; */
+    }
+
+    .elem {
+        height: 100px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .elem h2 {
+        font-size: 5vw;
+        position: relative;
+        z-index: 9;
+        padding: 0 2vw;
+        font-weight: 400;
+    }
+
+
+    .elem .overlay {
+        height: 100%;
+        width: 100%;
+        /* background-color: rgb(234, 7, 7); */
+        background-color: cadetblue;
+        position: absolute;
+        top: -100%;
+        transition: all ease 0.2s;
+    }
+
+    .elem:hover .overlay {
+        top: 0;
+
+    }
+
+    .fixed-image {
+        height: 25vw;
+        width: 20vw;
+        position: fixed;
+        z-index: 99;
+        left: 50%;
+        top: 25%;
+        display: none;
+        border-radius: 5%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .page4 {
+        height: 40vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        /* background-color: red; */
+
+    }
+
+    .page5 {
+        height: 50vh;
+        width: 100%;
+        /* background-color: #EFEAE3; */
+    }
+
+
+    .futter {
+        position: fixed;
+        z-index: 9;
+
+        width: 100%;
+        bottom: 0;
+        background-color: black;
+        display: flex;
+        /* align-items: flex-end; */
+        color: white;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 1vw 3vw 3vw;
+    }
+
+    .futter h1 {
+        font-size: 15vw;
+    }
+
+    .futter-bottom {
+        border-top: 1px solid #dadada;
+        height: 10vh;
+        width: 100%;
+    }
+
+    .futter-text1 {
+        padding-bottom: 3vw;
+        font-size: 3vw;
+        /* row-gap: 2vw; */
+        color: #EFEAE3;
+        display: flex;
+        justify-content: space-between;
+        /* column-gap: 5vw; */
+        line-height: 2.2vh;
+    }
+
+    .futter-text1 h6 {
+        color: #dadada;
+        font-size: 2vw;
+        padding-top: 4vh;
+    }
+
+    #logo {
+        font-size: 4vw;
+        transition: all ease 0.4s;
+    }
+
+    #threeline {
+        transition: all ease 0.4s;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
